@@ -1,0 +1,10 @@
+<view>用户个人信息</view>
+<view>{{message}}</view>
+<button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+<view wx:if="{{hasUserInfo}}">
+  <view>{{'国家：'+userInfo.country}}</view>
+  <view>{{'省份：'+userInfo.province}}</view>
+  <view>{{'城市：'+userInfo.city}}</view>
+  <view>{{'姓名：'+userInfo.nickName}}</view>
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+</view>
