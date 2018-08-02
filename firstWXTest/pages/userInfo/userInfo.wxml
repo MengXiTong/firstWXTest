@@ -8,3 +8,5 @@
   <view>{{'姓名：'+userInfo.nickName}}</view>
   <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
 </view>
+<map bindmarkertap="markertap" longitude="{{latitude}}" latitude="{{longitude}}"></map>
+<button bindtap='takeEncode'>扫码</button>
